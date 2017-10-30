@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test
+</title>
+</head>
+<body>
+
+  Sentence <input type="text" name="fname" id="varsa" style="height:50px; width: 300px; "><br>
+  Equvalient <input type="text" name="lname" id="chewbacca" style="height:50px; width: 300px; " ><br>
+  <input type="submit" value="Submit" onclick="palpatine()">
+
+
+
+<script type="text/javascript">
+	
+
+function palpatine(){
+
+
+var ahmet = document.getElementById('varsa').value;
+//alert(ahmet);
+String.prototype.replaceAt=function(index, replacement) {
+    return this.substr(0, index) + replacement+ this.substr(index + replacement.length);
+}
+
+
+//alert(hello.replaceAt(2, "!!"));
+
+
+//var res = ahmet.charAt(0);
+
+
+function setCharAt(str,index,chr) {
+    if(index > str.length-1) return str;
+    return str.substr(0,index) + chr + str.substr(index+1);
+}
+
+
+
+//alert(ahmet);
+
+for (var i = ahmet.length - 1; i >= 0; i--) {
+	
+if (ahmet[i]=="a") {
+
+
+ahmet = setCharAt(ahmet,i,'o');
+
+}
+
+if (ahmet[i]=="u") {
+
+
+ahmet = setCharAt(ahmet,i,'e');
+
+}
+
+if (ahmet[i]=="ı" || ahmet[i]=="i") {
+
+
+ahmet = setCharAt(ahmet,i,'e');
+
+}
+
+
+
+
+}
+
+//alert(ahmet);
+
+document.getElementById("chewbacca").value = ahmet;
+// for (var i = 0; i < 5; i++) {
+	
+// if (ahmet[i]=='a') {
+
+// ahmet[i]='o';
+
+// //alert("girdi");
+
+// }
+
+
+
+
+// 	alert(ahmet[i]);
+// }
+}
+</script>
+
+
+</body>
+</html>
